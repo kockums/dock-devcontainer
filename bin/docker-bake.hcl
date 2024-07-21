@@ -42,7 +42,7 @@ target "image" {
   context = "./src/${IMAGE_NAME}/"
   dockerfile = "Dockerfile"
   // Optionally specify a build target (uncomment to enable)
-  // target = "runner"
+  target = "runner"
   tags = [
     "${REGISTRY_ENDPOINT}/${IMAGE_NAME}:${VERSION}",
     "${REGISTRY_ENDPOINT}/${IMAGE_NAME}:latest",
