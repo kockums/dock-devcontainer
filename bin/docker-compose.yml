@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  docker-dev:
+    image: docker:dind
+    container_name: docker_builder
+    privileged: true
+    environment:
+      - DOCKER_TLS_CERTDIR=/certs
+    volumes:
+      - docker_certs:/certs/client
+      - workspace:/workspace
+    ports:
+      - "8080:8080"  # Forward web server port
+      - "5000:5000"  # Forward another common port for local testing
+    user: "developer"  # Match the user specified in devcontainer.json
+    command: ["dockerd-entrypoint.sh", "--host=unix:///var/run/docker.sock", "--host=tcp://0.0.0.0:2376"]
+    healthcheck:
+      test: ["CMD", "docker", "info"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  docker_certs:
+  workspace:
