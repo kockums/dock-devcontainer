@@ -492,8 +492,6 @@ OpenCover/
 # Azure Stream Analytics local run output
 ASALocalRun/
 
-# MSBuild Binary and Structured Log
-*.binlog
 
 # NVidia Nsight GPU debugger configuration file
 *.nvuser
@@ -558,7 +556,6 @@ xcuserdata/
 # =============================================================================
 
 .metadata
-# bin/
 tmp/
 *.tmp
 *.bak
@@ -1310,8 +1307,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-# Packed Addressables
-# /[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
