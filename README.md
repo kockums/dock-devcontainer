@@ -21,7 +21,7 @@ This repository contains a Dockerfile for setting up a Docker development enviro
 1. **Clone this Repository**
 
    ```bash
-   git clone https://github.com/yourusername/docker-dev-environment.git
+   git clone https://github.com/kockums/docker-devcontainer.git
    cd docker-dev-environment
    ```
 
