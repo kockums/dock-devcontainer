@@ -106,12 +106,12 @@ $RECYCLE.BIN/
 
 
 # Environments
-.env
-*.env
-.venv
-venv/
-env.bak/
-venv.bak/
+# .env
+# *.env
+# .venv
+# venv/
+# env.bak/
+# venv.bak/
 
 
 
@@ -855,9 +855,9 @@ celerybeat.pid
 # Environments
 .env
 .venv
-env/
+# env/
 venv/
-ENV/
+# ENV/
 env.bak/
 venv.bak/
 
@@ -1311,7 +1311,7 @@ sysinfo.txt
 crashlytics-build.properties
 
 # Packed Addressables
-/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+# /[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
