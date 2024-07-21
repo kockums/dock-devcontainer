@@ -8,20 +8,26 @@
 # Use a base image with Docker installed, such as Docker's dind image
 FROM docker:dind as base
 
-# Utilize build arguments to control versions and other parameters
-ARG BASH_VERSION=5.1.16-r0
-ARG GIT_VERSION=2.36.2-r0
-ARG CURL_VERSION=7.83.1-r3
-ARG CA_CERTIFICATES_VERSION=20220614-r0
+# # Utilize build arguments to control versions and other parameters
+# ARG BASH_VERSION=5.1.16-r0
+# ARG GIT_VERSION=2.36.2-r0
+# ARG CURL_VERSION=7.83.1-r3
+# ARG CA_CERTIFICATES_VERSION=20220614-r0
 
-# Install essential packages using specific versions to ensure reproducibility
-RUN --mount=type=cache,target=/var/cache/apk \
-    apk add --no-cache \
-    bash=${BASH_VERSION} \
-    git=${GIT_VERSION} \
-    curl=${CURL_VERSION} \
-    ca-certificates=${CA_CERTIFICATES_VERSION}
+# # Install essential packages using specific versions to ensure reproducibility
+# RUN --mount=type=cache,target=/var/cache/apk \
+#     apk add --no-cache \
+#     bash=${BASH_VERSION} \
+#     git=${GIT_VERSION} \
+#     curl=${CURL_VERSION} \
+#     ca-certificates=${CA_CERTIFICATES_VERSION}
 
+# Install essential packages
+RUN --mount=type=cache,target=/var/cache/apk apk add --no-cache \
+    bash \
+    git \
+    curl \
+    ca-certificates
 
 # =============================================================================
 # User Configuration
