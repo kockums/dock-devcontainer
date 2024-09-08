@@ -1,0 +1,22 @@
+# Code Owners
+
+## Global
+
+* @kockums @vanvianen
+
+## Documentation
+
+README.md   @vanvianen
+/docs/      @vanvianen
+
+## Python
+
+*.py        @vanvianen
+
+## Typescript
+
+*.ts        @vanvianen
+
+## SCSS
+
+*.scss      @vanvianen
